@@ -4,9 +4,16 @@
     "**/.env.*local"
   ],
   "pipeline": {
+    "db:generate": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
+    },
     "build": {
       "outputs": [
         ".outputs/**",
+        ".dist/**",
         "!.next/cache/**"
       ]
     },
